@@ -15,5 +15,10 @@ find_package(OpenMP REQUIRED)
 # externals
 add_subdirectory("externals/")
 
+# bvh
+add_library(bvh INTERFACE)
+target_include_directories(bvh INTERFACE "include/")
+target_link_libraries(bvh INTERFACE glm)
+
 # apps
 add_subdirectory("apps/")
